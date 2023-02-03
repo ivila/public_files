@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "07d97b32-b0b9-4d34-8674-68f4849e7b7f",
+		"name": "Book",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "[Auth]Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test-admin@xxx.com\",\n    \"password\": \"test1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8888/api/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "[User]Current",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8888/api/user/current"
+			},
+			"response": []
+		},
+		{
+			"name": "[Book]create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isbn\": \"1231\",\n    \"bookName\": \"zehui\",\n    \"coverUrl\": \"https://www.baidu.com/link?url=marfErctmwd_Pt4YBVg3ikPkZL1sZ5ja4-olDHgGMjJhppYzLo6xivqeWdT_ZkmfLYCu6ySwuYqkH8I5F_auX9jll6u2nUYEUIX-8Nw91Vq&wd=&eqid=a8600450000094470000000663daac6d\",\n    \"author\": \"zehui\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8888/api/book/create"
+			},
+			"response": []
+		},
+		{
+			"name": "[Book]update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isbn\": \"1231\",\n    \"bookName\": \"zehui\",\n    \"coverUrl\": \"https://www.baidu.com/link?url=marfErctmwd_Pt4YBVg3ikPkZL1sZ5ja4-olDHgGMjJhppYzLo6xivqeWdT_ZkmfLYCu6ySwuYqkH8I5F_auX9jll6u2nUYEUIX-8Nw91Vq&wd=&eqid=a8600450000094470000000663daac6d\",\n    \"author\": \"zehui\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8888/api/book/update"
+			},
+			"response": []
+		},
+		{
+			"name": "[Book]list",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"author\": \"author2\",\n    \"pageSize\": 20,\n    \"page\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8888/api/book/list"
+			},
+			"response": []
+		},
+		{
+			"name": "[Book]get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isbn\": \"1231\",\n    \"bookName\": \"zehui\",\n    \"coverUrl\": \"https://www.baidu.com/link?url=marfErctmwd_Pt4YBVg3ikPkZL1sZ5ja4-olDHgGMjJhppYzLo6xivqeWdT_ZkmfLYCu6ySwuYqkH8I5F_auX9jll6u2nUYEUIX-8Nw91Vq&wd=&eqid=a8600450000094470000000663daac6d\",\n    \"author\": \"zehui\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/api/book/get?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"book",
+						"get"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Book]delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isbn\": \"1231\",\n    \"bookName\": \"zehui\",\n    \"coverUrl\": \"https://www.baidu.com/link?url=marfErctmwd_Pt4YBVg3ikPkZL1sZ5ja4-olDHgGMjJhppYzLo6xivqeWdT_ZkmfLYCu6ySwuYqkH8I5F_auX9jll6u2nUYEUIX-8Nw91Vq&wd=&eqid=a8600450000094470000000663daac6d\",\n    \"author\": \"zehui\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/api/book/delete?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"book",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
